@@ -60,8 +60,8 @@ function useField<FormValues: FormValuesShape>(
         } = configRef.current
 
         if (formatOnBlur) {
-          const { value } = ((form.getFieldState(state.name): any): FieldState)
-          const formatted = format(value, state.name)
+          const { value } = ((form.getFieldState(name): any): FieldState)
+          const formatted = format(value, name)
 
           if (formatted !== value) {
             state.change(formatted)
